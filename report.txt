@@ -1,0 +1,210 @@
+==3533== Memcheck, a memory error detector
+==3533== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==3533== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
+==3533== Command: ./main_iplib mongolfiere.bmp flower2.bmp sharp immagineNuova.bmp 0
+==3533== Parent PID: 1943
+==3533== 
+--3533-- 
+--3533-- Valgrind options:
+--3533--    -v
+--3533--    --leak-check=full
+--3533--    --log-file=report.txt
+--3533-- Contents of /proc/version:
+--3533--   Linux version 5.3.0-55-generic (buildd@lcy01-amd64-009) (gcc version 9.2.1 20191008 (Ubuntu 9.2.1-9ubuntu2)) #49-Ubuntu SMP Thu May 21 12:47:19 UTC 2020
+--3533-- 
+--3533-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-rdrand
+--3533-- Page sizes: currently 4096, max supported 4096
+--3533-- Valgrind library directory: /usr/lib/x86_64-linux-gnu/valgrind
+--3533-- Reading syms from /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib
+--3533-- Reading syms from /usr/lib/x86_64-linux-gnu/ld-2.30.so
+--3533--   Considering /usr/lib/x86_64-linux-gnu/ld-2.30.so ..
+--3533--   .. CRC mismatch (computed 27d27021 wanted aaa15eb8)
+--3533--   Considering /lib/x86_64-linux-gnu/ld-2.30.so ..
+--3533--   .. CRC mismatch (computed 27d27021 wanted aaa15eb8)
+--3533--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.30.so ..
+--3533--   .. CRC is valid
+--3533-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux
+--3533--    object doesn't have a symbol table
+--3533--    object doesn't have a dynamic symbol table
+--3533-- Scheduler: using generic scheduler lock implementation.
+--3533-- Reading suppressions file: /usr/lib/x86_64-linux-gnu/valgrind/default.supp
+==3533== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-3533-by-nicola-on-???
+==3533== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-3533-by-nicola-on-???
+==3533== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-3533-by-nicola-on-???
+==3533== 
+==3533== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==3533== don't want to do, unless you know exactly what you're doing,
+==3533== or are doing some strange experiment):
+==3533==   /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=3533 ...command...
+==3533== 
+==3533== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==3533==   /path/to/gdb ./main_iplib
+==3533== and then give GDB the following command
+==3533==   target remote | /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=3533
+==3533== --pid is optional if only one valgrind process is running
+==3533== 
+--3533-- REDIR: 0x4021b90 (ld-linux-x86-64.so.2:strlen) redirected to 0x580c9c82 (???)
+--3533-- REDIR: 0x4021960 (ld-linux-x86-64.so.2:index) redirected to 0x580c9c9c (???)
+--3533-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_core-amd64-linux.so
+--3533--    object doesn't have a symbol table
+--3533-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so
+--3533--    object doesn't have a symbol table
+==3533== WARNING: new redirection conflicts with existing -- ignoring it
+--3533--     old: 0x04021b90 (strlen              ) R-> (0000.0) 0x580c9c82 ???
+--3533--     new: 0x04021b90 (strlen              ) R-> (2007.0) 0x0483e060 strlen
+--3533-- REDIR: 0x401e370 (ld-linux-x86-64.so.2:strcmp) redirected to 0x483efd0 (strcmp)
+--3533-- REDIR: 0x40220f0 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4842a20 (mempcpy)
+--3533-- Reading syms from /usr/lib/x86_64-linux-gnu/libm-2.30.so
+--3533--   Considering /usr/lib/x86_64-linux-gnu/libm-2.30.so ..
+--3533--   .. CRC mismatch (computed e12bfda3 wanted 14b81770)
+--3533--   Considering /lib/x86_64-linux-gnu/libm-2.30.so ..
+--3533--   .. CRC mismatch (computed e12bfda3 wanted 14b81770)
+--3533--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libm-2.30.so ..
+--3533--   .. CRC is valid
+--3533-- Reading syms from /usr/lib/x86_64-linux-gnu/libc-2.30.so
+--3533--   Considering /usr/lib/x86_64-linux-gnu/libc-2.30.so ..
+--3533--   .. CRC mismatch (computed 7a789c53 wanted 61e075a4)
+--3533--   Considering /lib/x86_64-linux-gnu/libc-2.30.so ..
+--3533--   .. CRC mismatch (computed 7a789c53 wanted 61e075a4)
+--3533--   Considering /usr/lib/debug/lib/x86_64-linux-gnu/libc-2.30.so ..
+--3533--   .. CRC is valid
+--3533-- REDIR: 0x4a4b630 (libc.so.6:memmove) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4a930 (libc.so.6:strncpy) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4b960 (libc.so.6:strcasecmp) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4a250 (libc.so.6:strcat) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4a990 (libc.so.6:rindex) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4ce00 (libc.so.6:rawmemchr) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a67e90 (libc.so.6:wmemchr) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a679d0 (libc.so.6:wcscmp) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4b790 (libc.so.6:mempcpy) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4b5c0 (libc.so.6:bcmp) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4a8c0 (libc.so.6:strncmp) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4a300 (libc.so.6:strcmp) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4b6f0 (libc.so.6:memset) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a67990 (libc.so.6:wcschr) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4a820 (libc.so.6:strnlen) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4a3e0 (libc.so.6:strcspn) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4b9b0 (libc.so.6:strncasecmp) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4a380 (libc.so.6:strcpy) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4bb00 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a69100 (libc.so.6:wcsnlen) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a67a10 (libc.so.6:wcscpy) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4a9d0 (libc.so.6:strpbrk) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4a2b0 (libc.so.6:index) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4a7e0 (libc.so.6:strlen) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a53d50 (libc.so.6:memrchr) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4ba00 (libc.so.6:strcasecmp_l) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4b580 (libc.so.6:memchr) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a67ae0 (libc.so.6:wcslen) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4ac90 (libc.so.6:strspn) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4b900 (libc.so.6:stpncpy) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4b8a0 (libc.so.6:stpcpy) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4ce40 (libc.so.6:strchrnul) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4ba50 (libc.so.6:strncasecmp_l) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4a4b4a0 (libc.so.6:strstr) redirected to 0x48301d0 (_vgnU_ifunc_wrapper)
+--3533-- REDIR: 0x4b339c0 (libc.so.6:__strrchr_avx2) redirected to 0x483da10 (rindex)
+--3533-- REDIR: 0x4a45290 (libc.so.6:malloc) redirected to 0x483a780 (malloc)
+--3533-- REDIR: 0x4a4b150 (libc.so.6:__GI_strstr) redirected to 0x4842ca0 (__strstr_sse2)
+--3533-- REDIR: 0x4b36ba0 (libc.so.6:__memcpy_avx_unaligned_erms) redirected to 0x48419f0 (memmove)
+--3533-- REDIR: 0x4b30180 (libc.so.6:__memcmp_avx2_movbe) redirected to 0x48411e0 (bcmp)
+--3533-- REDIR: 0x4a45880 (libc.so.6:free) redirected to 0x483b9d0 (free)
+--3533-- REDIR: 0x4b37020 (libc.so.6:__memset_avx2_unaligned_erms) redirected to 0x48418e0 (memset)
+--3533-- REDIR: 0x4b36b80 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4842660 (mempcpy)
+--3533-- REDIR: 0x4b2f090 (libc.so.6:__strcmp_avx2) redirected to 0x483eed0 (strcmp)
+--3533-- REDIR: 0x4b33b90 (libc.so.6:__strlen_avx2) redirected to 0x483df40 (strlen)
+--3533-- REDIR: 0x4a66590 (libc.so.6:__strstr_sse2_unaligned) redirected to 0x4842c20 (strstr)
+==3533== 
+==3533== HEAP SUMMARY:
+==3533==     in use at exit: 20,876,040 bytes in 865,462 blocks
+==3533==   total heap usage: 892,378 allocs, 26,916 frees, 21,862,098 bytes allocated
+==3533== 
+==3533== Searching for pointers to 865,462 not-freed blocks
+==3533== Checked 78,088 bytes
+==3533== 
+==3533== 24 bytes in 1 blocks are possibly lost in loss record 1 of 18
+==3533==    at 0x483A7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3533==    by 0x11CAF9: ip_mat_create (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E005: crea_sotto_matrice_da_indice_di_dimensione (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E0FB: ip_mat_convolve (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x10BB27: main (main_iplib.c:97)
+==3533== 
+==3533== 36 bytes in 1 blocks are definitely lost in loss record 2 of 18
+==3533==    at 0x483A7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3533==    by 0x11CA68: ip_mat_create (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11C658: bitmap_to_ip_mat (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x10B7EC: main (main_iplib.c:72)
+==3533== 
+==3533== 36 bytes in 1 blocks are definitely lost in loss record 3 of 18
+==3533==    at 0x483A7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3533==    by 0x11CA68: ip_mat_create (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E653: create_sharpen_filter (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x10BB19: main (main_iplib.c:96)
+==3533== 
+==3533== 36 bytes in 1 blocks are definitely lost in loss record 4 of 18
+==3533==    at 0x483A7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3533==    by 0x11CA68: ip_mat_create (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E077: ip_mat_convolve (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x10BB27: main (main_iplib.c:97)
+==3533== 
+==3533== 36 bytes in 1 blocks are definitely lost in loss record 5 of 18
+==3533==    at 0x483A7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3533==    by 0x11CA68: ip_mat_create (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E95D: ip_mat_padding (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E0A4: ip_mat_convolve (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x10BB27: main (main_iplib.c:97)
+==3533== 
+==3533== 314,712 bytes in 26,226 blocks are definitely lost in loss record 6 of 18
+==3533==    at 0x483A7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3533==    by 0x11D284: compute_stats (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11D73C: ip_mat_subset (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E037: crea_sotto_matrice_da_indice_di_dimensione (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E0FB: ip_mat_convolve (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x10BB27: main (main_iplib.c:97)
+==3533== 
+==3533== 314,712 bytes in 26,226 blocks are definitely lost in loss record 7 of 18
+==3533==    at 0x483A7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3533==    by 0x11D29D: compute_stats (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11D73C: ip_mat_subset (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E037: crea_sotto_matrice_da_indice_di_dimensione (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E0FB: ip_mat_convolve (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x10BB27: main (main_iplib.c:97)
+==3533== 
+==3533== 314,712 bytes in 26,226 blocks are definitely lost in loss record 8 of 18
+==3533==    at 0x483A7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3533==    by 0x11D2B6: compute_stats (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11D73C: ip_mat_subset (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E037: crea_sotto_matrice_da_indice_di_dimensione (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E0FB: ip_mat_convolve (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x10BB27: main (main_iplib.c:97)
+==3533== 
+==3533== 4,301,064 (839,232 direct, 3,461,832 indirect) bytes in 26,226 blocks are definitely lost in loss record 15 of 18
+==3533==    at 0x483A7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3533==    by 0x11CA2F: ip_mat_create (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11D6AF: ip_mat_subset (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E037: crea_sotto_matrice_da_indice_di_dimensione (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E0FB: ip_mat_convolve (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x10BB27: main (main_iplib.c:97)
+==3533== 
+==3533== 5,664,816 bytes in 236,034 blocks are definitely lost in loss record 17 of 18
+==3533==    at 0x483A7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3533==    by 0x11CAF9: ip_mat_create (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11D6AF: ip_mat_subset (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E037: crea_sotto_matrice_da_indice_di_dimensione (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E0FB: ip_mat_convolve (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x10BB27: main (main_iplib.c:97)
+==3533== 
+==3533== 9,965,856 (839,232 direct, 9,126,624 indirect) bytes in 26,226 blocks are definitely lost in loss record 18 of 18
+==3533==    at 0x483A7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==3533==    by 0x11CA2F: ip_mat_create (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E005: crea_sotto_matrice_da_indice_di_dimensione (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x11E0FB: ip_mat_convolve (in /home/nicola/CLionProjects/progetto_c/progetto_1920/main_iplib)
+==3533==    by 0x10BB27: main (main_iplib.c:97)
+==3533== 
+==3533== LEAK SUMMARY:
+==3533==    definitely lost: 8,287,560 bytes in 367,168 blocks
+==3533==    indirectly lost: 12,588,456 bytes in 498,293 blocks
+==3533==      possibly lost: 24 bytes in 1 blocks
+==3533==    still reachable: 0 bytes in 0 blocks
+==3533==         suppressed: 0 bytes in 0 blocks
+==3533== 
+==3533== ERROR SUMMARY: 11 errors from 11 contexts (suppressed: 0 from 0)

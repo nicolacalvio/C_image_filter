@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall --ansi --pedantic -lm -g3 -O3 -fsanitize=address -fsanitize=undefined -Wextra -std=gnu89  -g   CMakeFiles/progetto_c.dir/main_iplib.c.o CMakeFiles/progetto_c.dir/ip_lib.c.o CMakeFiles/progetto_c.dir/bmp.c.o  -o progetto_c  -lm 

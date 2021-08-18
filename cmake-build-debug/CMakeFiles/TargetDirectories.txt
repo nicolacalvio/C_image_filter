@@ -1,0 +1,3 @@
+/home/nicola/CLionProjects/progetto_c/progetto_1920/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/nicola/CLionProjects/progetto_c/progetto_1920/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/nicola/CLionProjects/progetto_c/progetto_1920/cmake-build-debug/CMakeFiles/progetto_c.dir
